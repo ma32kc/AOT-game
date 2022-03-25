@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/settings.css" type="text/css">
+<body>
+<div class="wrapper">
+    <a class="back-link" href="/">Назад</a>
+    <div class="main-block">
+        <h2 class="title">Настройки</h2>
+        <form id="myForm" action="http://localhost:3000/game" method="post">
+            <div>
+                <label class="container" for="input1">Девушки
+                    <input type="radio" class="input"
+                           name="sex" value="female" id="input1">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" for="input2">Парни
+                    <input type="radio" class="input"
+                           name="sex" value="male" id="input2">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" for="input3">Все
+                    <input type="radio" class="input"
+                           name="sex" value="all" id="input3" checked>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div>
+                <button type="submit" class="submit">Принять</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>

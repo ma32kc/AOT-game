@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
+    background: -moz-linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
+    background: linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
+    overflow: hidden;
+    font-family: 'Reggae One', cursive;
+}
+
+.wrapper {
+}
+.container {
+    max-width: 1000px;
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.bg-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 90%;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 200px;
+    color: #000000;
+    background: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+main {
+
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    padding: 0;
+}
+
+.menu__item {
+    display: inline-flex;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 7px;
+    transition: all 0.3s ease 0s;
+}
+.menu__item:hover {
+    transform: scale(1.05);
+    background: #ff4f4f;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #1e1d1d;
+    font-size: 30px;
+}
+.menu__link:hover {
+    color: #fff;
+}
+@media (max-width: 920px) {
+    .title {
+        font-size: 40px;
+        margin-bottom: 100px;
+        padding: 8px;
+        letter-spacing: 3px;
+    }
+}
+@media (max-width: 425px) {
+    .title {
+        font-size: 30px;
+        margin-bottom: 50px;
+        padding: 10px 0;
+        letter-spacing: 2px;
+    }
+}

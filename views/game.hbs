@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="/css/game.css" type="text/css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <a class="back-link" href="/">Назад</a>
+        </div>
+    </header>
+    <main>
+        <div class="main__container container">
+            <div class="game">
+                <div class="grid">
+                    {{#each characters}}
+                        <div class="grid__item item-grid" data-id="{{_id}}" data-kiss="{{kiss}}" data-marry="{{marry}}"
+                             data-kill="{{kill}}">
+                            <div class="item-grid__img"><img src="{{img}}"></div>
+                            <div hidden class="item-grid__popup">
+                                <div class="item-grid__body">
+                                    <div class="item-grid__name">{{name}}</div>
+                                    <div class="item-grid__anime">{{anime}}</div>
+                                </div>
+                                <div class="item-grid__choose">
+                                    <div type="image/svg+xml" data-type="kiss" class="item-grid__button"><img src="/img/icons/lips.svg"></div>
+                                    <div type="image/svg+xml" data-type="marry" class="item-grid__button"><img src="/img/icons/ring.svg"></div>
+                                    <div type="image/svg+xml" data-type="kill" class="item-grid__button"><img src="/img/icons/scull.svg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer__body">
+                <h2 class="footer__title">{{titleOfAnime}}</h2>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="/js/game.js"></script>
+</body>
+</html>

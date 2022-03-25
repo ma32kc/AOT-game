@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+body {
+    min-height: 100vh;
+    background: -webkit-linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
+    background: -moz-linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
+    background: linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
+    overflow: hidden;
+    padding: 10px;
+    color: #1e1d1d;
+    font-family: 'Reggae One', cursive;
+}
+
+.title {
+    text-align: center  ;
+}
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#myForm {
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    column-gap: 10px;
+    padding-left: 10px;
+    margin: 0 auto;
+}
+
+#myForm div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.submit {
+    background: #ff4f4f;
+    border: none;
+    text-transform: lowercase;
+    padding: 10px;
+    color: #fff;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.back-link {
+    display: inline-flex;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 7px;
+    transition: all 0.3s ease 0s;
+}
+
+.back-link:hover {
+    transform: scale(1.05);
+    background: #ff4f4f;
+    color: #fff;
+}
+
+@media (max-width: 450px) {
+    .container {
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .checkmark {
+        top: -22%;
+    }
+
+    #myForm div {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+}
