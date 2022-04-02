@@ -31,7 +31,7 @@ document.addEventListener ("DOMContentLoaded", function (event) {
         <div class="popup__text"><span class="popup__users">${users}</span> пользователей ответило</div>
         <div class="popup__items"></div>
         <div class="popup__footer">
-        <div class="popup__btn" onclick="document.location.reload()">Следующий раунд</div>
+        <a href="#" class="popup__btn animation" onclick="document.location.reload()">Следующий раунд</a>
         </div>
     </div>  
 </div>
@@ -52,11 +52,12 @@ document.addEventListener ("DOMContentLoaded", function (event) {
             `)
         })
         document.querySelectorAll ('.item-popup__el').forEach (el => el.style.height = `${el.innerText}`)
-
+        document.querySelector('.wrapper').remove()
     }
+
     let typesArray = ['', '', '']
     const btn = document.createElement ('div')
-    btn.classList.add ('item-grid__button', 'item-grid__button_addable')
+    btn.classList.add ('item-grid__button', 'item-grid__button_addable', 'animation')
 
     document.querySelectorAll ('.item-grid__img').forEach (el => el.addEventListener ("click", () => {
         el.parentElement.classList.toggle ('active')
@@ -104,7 +105,7 @@ document.addEventListener ("DOMContentLoaded", function (event) {
             if (!typesArray.includes (undefined)) {
                 document.querySelector ('.game').append (btn)
                 btn.innerText = 'Дубликаты'
-                btn.removeEventListener('click', handleSubmit)
+                btn.removeEventListener ('click', handleSubmit)
             }
         }
     }))
