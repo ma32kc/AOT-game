@@ -3,7 +3,7 @@ body {
     background: -webkit-linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
     background: -moz-linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
     background: linear-gradient(135deg, rgb(231, 221, 221), rgb(229, 170, 170));
-    font-family: 'Reggae One', cursive;
+    font-family: 'Reggae One', cursive, 'Arial';
 }
 
 html,

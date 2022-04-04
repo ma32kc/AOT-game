@@ -7,7 +7,7 @@ body {
     overflow: hidden;
     padding: 10px;
     color: #1e1d1d;
-    font-family: 'Reggae One', cursive;
+    font-family: 'Reggae One', cursive, 'Arial';
 }
 
 .title {
